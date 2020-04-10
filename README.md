@@ -51,13 +51,23 @@ There are two big challenges that are associated with generated dataset. These t
 
 * Cost Of Comparison Operation :- Comparison of instances with all other instances in the dataset for finding similarity is expensive in terms of time and memory.
 
-
-
-1.Curse Of Dimensionality :-High Dimensionality of the unique characteristic/feature vector required to identify clones
-
-2.Cost Of Comparison Operation :- Comparison of instances with all other instances in the dataset for finding similarity is expensive in terms of time and memory.
-
 Due to these two factors we decided to implement K-Means and Locality Sensitive Hashing with their respective variations.
+
+# 2.2.1 K-MEANS ALGORITHM
+
+K-means algorithm is an iterative algorithm that tries to partition the dataset into K pre-defined distinct non-overlapping subgroups (clusters) where each data point belongs to only one group. Since clustering is one of the most common exploratory data analysis techniques used to get an intuition about the structure of the data.Therefore, it makes sense to use K-means, as similar codes would be in the same cluster which is our main motivation behind the usage of k-means. For our project we have used the scikit-learn’s implementation of k-means and used the original higher dimensional dataset for clustering.
+
+Number of clusters :- To find the optimal number of clusters we used the elbow method using Inertia(Sum of squared distances of samples to their closest cluster center).
+
+# Advanced Approach :-
+
+This is done in three steps :-
+
+Step 1 :-  In this step we reduce the dimensionality by using the same PCA technique mentioned above.
+
+Step 2 :- Dividing input space into smaller subspaces .
+
+Step 3 :-  Hashing as a candidate for nearest neighbour search.
 
 
 
