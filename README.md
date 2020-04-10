@@ -61,6 +61,8 @@ Number of clusters :- To find the optimal number of clusters we used the elbow m
 
 # Advanced Approach :-
 
+![alt text](https://github.com/ankur27aggarwal/dummy/blob/master/Screenshot%202020-04-10%20at%205.55.52%20PM.png)
+
 This is done in three steps :-
 
 Step 1 :-  In this step we reduce the dimensionality by using the same PCA technique mentioned above.
@@ -71,13 +73,18 @@ Step 3 :-  Hashing as a candidate for nearest neighbour search.
 
 # 2.2.2 Locality Sensitive Hashing
 
-Locality-Sensitive Hashing (LSH) is an algorithmic technique that hashes similar input items into the same "buckets" with high probability.For our project we used LSH using Random Projection.Locality Sensitive Hashing solves both the challenges mentioned earlier which are explained as followed :-
+Locality-Sensitive Hashing (LSH) is an algorithmic technique that hashes similar input items into the same "buckets" with high probability.
+![alt text](https://github.com/ankur27aggarwal/dummy/blob/master/Screenshot%202020-04-10%20at%205.56.37%20PM.png)
+For our project we used LSH using Random Projection.Locality Sensitive Hashing solves both the challenges mentioned earlier which are explained as followed :-
 
 - For Challenge 1 :- As shown in the figure the first hash function reduces the dimensionality of the dataset as we project our feature vector onto a random vector.
 
 - For Challenge 2 :-  The second hash function further reduces the dimensionality and thus comparing  each instance with all the other instances on the basis of hash value  gives the exact similar pairs we use band=1 with buckets containing code clones.
 
-# 3 Result
+# 3. Result
+![alt text](https://github.com/ankur27aggarwal/dummy/blob/master/Screenshot%202020-04-10%20at%205.57.46%20PM.png)
+Clustering with k= 5 :-
+![alt text](https://github.com/ankur27aggarwal/dummy/blob/master/Screenshot%202020-04-10%20at%205.58.10%20PM.png)
 
 Drawbacks of choosing number of cluster k=5 :- Our dataset contains around 46k non duplicated programs so ideally it should have around 46k clusters, therefore K=5  won’t be a good choice for clone detection.To deal with problem of dimensionality we also tried PCA(Principal Component Analysis) dimensionality reduction technique.Results with clustering on dimensionally reduced data were same, Elbow was at k=5.
 
@@ -91,6 +98,18 @@ Thus we used advanced approaching for finding similarity between source codes
 | PCA,K-Means Clustering and Hashing | ~3.71 Seconds |
 | Locality Sensitive Hashing Using Random Projection | ~2.16 Seconds |
 | Locality Sensitive Hashing Using Gaussian Projection(Scikit learn) | ~1.82 Seconds |
+
+# 4. Discussion
+
+To find the relevance of our solution, we tried to compare our solution with existing works which mostly used classification and had less number of instance, we found that it was inappropriate to use classification for such problems where we need to find similarity between the elements, Clustering and similarity search are candidates which can be used for finding similar items, out of which similarity search is best option for finding exact similars,as LSH using random projection reduces the dimensionality of dataset and also reduces the computational time.
+
+However results would be have been completely different if we only needed to find near similar instead of exact similars for example if we changed the values in dot product from float to integer, it gave near similars and buckets reduced drastically, as we were trying to find near similars instead of exact similars.Further we did not had false positives and false negatives as we were only finding exact clones or similars.There would have been false positive and false negatives definitely if we would have been finding near similars. 
+
+Our project works only on syntactic clones we are further thinking to extend our project for semantic clones which can be detected using abstract syntax trees, thus extracting features from these trees can help extracting the semantic details of the program which can be used as features to detect semantic clones.
+
+We only included java programs in our dataset thus we can add support for more languages which inturn can help in detecting clones for other languages also.
+
+Initially we have only 56k instances in our dataset. Linear sensitive hashing is giving fast results,However with support for more programming languages instances will increase gradually thus we are thinking to implement a parallelized version of Linear Sensitive Hashing using random projection for parallel computation and thus more faster results.
 
 
 
