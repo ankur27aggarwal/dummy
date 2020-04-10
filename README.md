@@ -37,8 +37,8 @@ We performed the following set of operations to generate data suitable for algor
   - Next step was to look for the features which could be used to distinguish each of these programs,thus we performed lexical analysis using JAVALANG tool on each program present in the dataset, it breaks each program into a set of tokens, we used count of each token present in a program as the set of features for that particular program.
 For eg:
 Consider a simple program to add two numbers after performing lexical analysis the tokens generated are given below.
-![alt text](https://github.com/puk18/bigdata-project-w2020/blob/master/Images/log1.jpg)
-Screenshot 2020-04-10 at 5.15.49 PM.png
+![alt text](https://github.com/ankur27aggarwal/dummy/blob/master/Screenshot%202020-04-10%20at%205.15.49%20PM.png)
+
 
 
 
