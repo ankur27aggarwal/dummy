@@ -14,3 +14,24 @@ Code clones are fragments of codes which are identical to each other, these clon
 
 - Semantic clones (Type 4): More than one code segments that are functionally similar but implemented by different syntactic variants
 
+The aim of our project is to detect type 1 and type 2 clones. As, most of the programmers try to simply replicate their previous work and reuse existing pieces of code, due to this trend many bugs are introduced in the software unknowingly which are very hard to detect once the program reaches a certain level of complexity.With our approach of using machine learning we want to detect the clones in such a way that it can be used  for various other purpose also like :- aspect mining, programunderstanding, plagiarism detection, copyright infringement investigation, code compaction, software evolution analysis, code quality analysis, bug detection and virus detection may need the extraction of semantically or syntactically similar code blocks, making clone detection effective and useful part of software analysis. 
+
+# Methods and Methodology 
+
+It further is divided into the phases that are :- 
+
+- Data generation 
+- algorithm implementation
+Followed by the section III which is Result #and section IV which is discussion . From the project we found out that compared to #K-means , LSH is the best algorithm to find the similar part in any kind of dataset.
+
+
+
+
+
+
+
+
+
+
+
+
