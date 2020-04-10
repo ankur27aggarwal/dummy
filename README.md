@@ -38,7 +38,7 @@ We performed the following set of operations to generate data suitable for algor
 For eg:
 Consider a simple program to add two numbers after performing lexical analysis the tokens generated are given below.
 ![alt text](https://github.com/ankur27aggarwal/dummy/blob/master/Screenshot%202020-04-10%20at%205.15.49%20PM.png)
-
+These lexical tokens were stored in  CodeClone.csv file such that each row in represents different number of tokens present in each source code file.After parsing all the programs our dataset Contains 56,168 rows (or programs),including 10k duplicates approx and 15 different features .
 
 
 
