@@ -86,11 +86,11 @@ Thus we used advanced approaching for finding similarity between source codes
 - Compared the performance of both the approaches on the basis of execution time.
 - Locality sensitive Hashing detected duplicates faster than using Clustering and Hashing together.
 
-| Approach | Execution TIme |
+| Approach | Execution Time |
 | ------ | ------ |
-| PCA,K-Means Clustering and Hashing | [~3.71 Seconds][PlDb] |
-| Locality Sensitive Hashing Using Random Projection | [~2.16 Seconds][PlGh] |
-| Locality Sensitive Hashing Using Gaussian Projection(Scikit learn) | [~1.82 Seconds][PlGd] |
+| PCA,K-Means Clustering and Hashing | ~3.71 Seconds |
+| Locality Sensitive Hashing Using Random Projection | ~2.16 Seconds |
+| Locality Sensitive Hashing Using Gaussian Projection(Scikit learn) | ~1.82 Seconds |
 
 
 
