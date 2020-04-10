@@ -69,6 +69,32 @@ Step 2 :- Dividing input space into smaller subspaces .
 
 Step 3 :-  Hashing as a candidate for nearest neighbour search.
 
+# 2.2.2 Locality Sensitive Hashing
+
+Locality-Sensitive Hashing (LSH) is an algorithmic technique that hashes similar input items into the same "buckets" with high probability.For our project we used LSH using Random Projection.Locality Sensitive Hashing solves both the challenges mentioned earlier which are explained as followed :-
+
+- For Challenge 1 :- As shown in the figure the first hash function reduces the dimensionality of the dataset as we project our feature vector onto a random vector.
+
+- For Challenge 2 :-  The second hash function further reduces the dimensionality and thus comparing  each instance with all the other instances on the basis of hash value  gives the exact similar pairs we use band=1 with buckets containing code clones.
+
+# 3 Result
+
+Drawbacks of choosing number of cluster k=5 :- Our dataset contains around 46k non duplicated programs so ideally it should have around 46k clusters, therefore K=5  won’t be a good choice for clone detection.To deal with problem of dimensionality we also tried PCA(Principal Component Analysis) dimensionality reduction technique.Results with clustering on dimensionally reduced data were same, Elbow was at k=5.
+
+Thus we used advanced approaching for finding similarity between source codes
+
+- Compared the performance of both the approaches on the basis of execution time.
+- Locality sensitive Hashing detected duplicates faster than using Clustering and Hashing together.
+
+| Approach | Execution TIme |
+| ------ | ------ |
+| PCA,K-Means Clustering and Hashing | [~3.71 Seconds][PlDb] |
+| Locality Sensitive Hashing Using Random Projection | [~2.16 Seconds][PlGh] |
+| Locality Sensitive Hashing Using Gaussian Projection(Scikit learn) | [~1.82 Seconds][PlGd] |
+
+
+
+
 
 
 
