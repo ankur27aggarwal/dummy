@@ -22,6 +22,7 @@ It further is divided into the phases that are :-
 
 - Data generation 
 - algorithm implementation
+
 Followed by the section III which is Result #and section IV which is discussion . From the project we found out that compared to #K-means , LSH is the best algorithm to find the similar part in any kind of dataset.
 
 
