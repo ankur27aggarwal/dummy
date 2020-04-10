@@ -83,7 +83,9 @@ For our project we used LSH using Random Projection.Locality Sensitive Hashing s
 
 # 3. Result
 ![alt text](https://github.com/ankur27aggarwal/dummy/blob/master/Screenshot%202020-04-10%20at%205.57.46%20PM.png)
+
 Clustering with k= 5 :-
+
 ![alt text](https://github.com/ankur27aggarwal/dummy/blob/master/Screenshot%202020-04-10%20at%205.58.10%20PM.png)
 
 Drawbacks of choosing number of cluster k=5 :- Our dataset contains around 46k non duplicated programs so ideally it should have around 46k clusters, therefore K=5  won’t be a good choice for clone detection.To deal with problem of dimensionality we also tried PCA(Principal Component Analysis) dimensionality reduction technique.Results with clustering on dimensionally reduced data were same, Elbow was at k=5.
@@ -109,7 +111,7 @@ Our project works only on syntactic clones we are further thinking to extend our
 
 We only included java programs in our dataset thus we can add support for more languages which inturn can help in detecting clones for other languages also.
 
-Initially we have only 56k instances in our dataset. Linear sensitive hashing is giving fast results,However with support for more programming languages instances will increase gradually thus we are thinking to implement a parallelized version of Linear Sensitive Hashing using random projection for parallel computation and thus more faster results.
+Initially we have only 56k instances in our dataset. Locality Sensitive Hashing is giving fast results,However with support for more programming languages instances will increase gradually thus we are thinking to implement a parallelized version of Locality Sensitive Hashing using random projection for parallel computation and thus more faster results.
 
 
 
