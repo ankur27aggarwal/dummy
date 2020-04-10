@@ -47,9 +47,9 @@ Here null values indicate features(tokens)which are not present in certain progr
 
 There are two big challenges that are associated with generated dataset. These two challenges are :-
 
-* [Curse Of Dimensionality] :- High Dimensionality of the unique characteristic/feature vector required to identify clones.
+* [Curse Of Dimensionality] - High Dimensionality of the unique characteristic/feature vector required to identify clones.
 
-* [Cost Of Comparison Operation] :- Comparison of instances with all other instances in the dataset for finding similarity is expensive in terms of time and memory.
+* [Cost Of Comparison Operation] - Comparison of instances with all other instances in the dataset for finding similarity is expensive in terms of time and memory.
 
 
 
