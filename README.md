@@ -43,6 +43,17 @@ These lexical tokens were stored in  CodeClone.csv file such that each row in re
 ![alt text](https://github.com/ankur27aggarwal/dummy/blob/master/Screenshot%202020-04-10%20at%205.22.53%20PM.png)
 Here null values indicate features(tokens)which are not present in certain programs.
 
+# 2.2 Algorithms Implemented
+
+There are two big challenges that are associated with generated dataset. These two challenges are :-
+
+1.Curse Of Dimensionality :-High Dimensionality of the unique characteristic/feature vector required to identify clones
+
+2.Cost Of Comparison Operation :- Comparison of instances with all other instances in the dataset for finding similarity is expensive in terms of time and memory.
+
+Due to these two factors we decided to implement K-Means and Locality Sensitive Hashing with their respective variations.
+
+
 
 
   
