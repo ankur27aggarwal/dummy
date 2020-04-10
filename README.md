@@ -29,7 +29,6 @@ There was no available dataset for code clones,so there were no definitive set o
 
 We performed the following set of operations to generate data suitable for algorithms.
 - Step 1 :- Injection of code clones in dataset .
-###
   - Injecting Type 1 clones(Exact CLones)-Created multiple copies of the codes,Addition of comments in few codes.
   - Injecting Type 2 clones(Renamed CLones):Modifications in identifier names including Type 1 changes
 
