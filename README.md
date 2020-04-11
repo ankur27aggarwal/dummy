@@ -13,13 +13,13 @@ Code clones are fragments of codes which are identical to each other, these clon
 
 The 4 types of clones are:
 
-- Exact clones (Type 1):Identical code segments except for changes in comments, layouts and whitespaces.
+* Exact clones (Type 1):Identical code segments except for changes in comments, layouts and whitespaces.
 
-- Renamed clones (Type 2):Code segments which are syntactically or structurally similar other than changes in comments,identifiers,types, literals, and layouts. These clones are also called parameterised clones.  
+* Renamed clones (Type 2):Code segments which are syntactically or structurally similar other than changes in comments,identifiers,types, literals, and layouts. These clones are also called parameterised clones.  
  
-- Near Miss clones (Type 3): Copied pieces with further modification such as addition or removal of statements and changes in whitespaces, identifiers, layouts, comments, and types but outcomes are similar. These clones are also known as gapped clones. 
+* Near Miss clones (Type 3): Copied pieces with further modification such as addition or removal of statements and changes in whitespaces, identifiers, layouts, comments, and types but outcomes are similar. These clones are also known as gapped clones. 
 
-- Semantic clones (Type 4): More than one code segments that are functionally similar but implemented by different syntactic variants.
+* Semantic clones (Type 4): More than one code segments that are functionally similar but implemented by different syntactic variants.
 
 <p align="justify">
 The aim of our project is to detect type 1 and type 2 clones. As, most of the programmers try to simply replicate their previous work and reuse existing pieces of code, due to this trend many bugs are introduced in the software unknowingly which are very hard to detect once the program reaches a certain level of complexity.With our approach of using machine learning we want to detect the clones in such a way that it can be used  for various other purpose also like aspect mining, programunderstanding, plagiarism detection, copyright infringement investigation, code compaction, software evolution analysis, code quality analysis, bug detection and virus detection may need the extraction of semantically or syntactically similar code blocks, making clone detection effective and useful part of software analysis. 
@@ -117,8 +117,8 @@ Clustering with k= 5,Plot of points w.r.t to keywords and identifiers.
 Drawbacks of choosing number of cluster k=5 :- Our dataset contains around 46k non duplicated programs so ideally it should have around 46k clusters, therefore K=5  won’t be a good choice for clone detection.To deal with problem of dimensionality we also tried PCA(Principal Component Analysis) dimensionality reduction technique.Results with clustering on dimensionally reduced data were same, Elbow was at k=5.Thus we used advanced approaching for finding similarity between source codes
 </p>
 
-- Compared the performance of both the approaches on the basis of execution time.
-- Locality sensitive Hashing detected duplicates faster than using Clustering and Hashing together.
+* Compared the performance of both the approaches on the basis of execution time.
+* Locality sensitive Hashing detected duplicates faster than using Clustering and Hashing together.
 
 | Approach | Execution Time |
 | ------ | ------ |
@@ -127,15 +127,20 @@ Drawbacks of choosing number of cluster k=5 :- Our dataset contains around 46k n
 | Locality Sensitive Hashing Using Gaussian Projection(Scikit learn) | ~1.82 Seconds |
 
 # 4. Discussion
+
+
 <p align="justify">
 To find the relevance of our solution, we tried to compare our solution with existing works[5][6] which mostly used classification and had less number of instance, we found that it was inappropriate to use classification for such problems where we need to find similarity between the elements, Clustering and similarity search are candidates which can be used for finding similar items, out of which similarity search is best option for finding exact similars,as LSH using random projection reduces the dimensionality of dataset and also reduces the computational time.
 </p>
+
 <p align="justify">
 However results would be have been completely different if we only needed to find near similar instead of exact similars for example if we changed the values in dot product from float to integer, it gave near similars and buckets reduced drastically, as we were trying to find near similars instead of exact similars.Further we did not had false positives and false negatives as we were only finding exact clones or similars.There would have been false positive and false negatives definitely if we would have been finding near similars. 
 </p>
+
 <p align="justify">
 Our project works only on syntactic clones we are further thinking to extend our project for semantic clones which can be detected using abstract syntax trees, thus extracting features from these trees can help extracting the semantic details of the program which can be used as features to detect semantic clones.
 </p>
+
 <p align="justify">
 We only included java programs in our dataset thus we can add support for more languages which inturn can help in detecting clones for other languages also.
 </p>
