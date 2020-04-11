@@ -58,7 +58,7 @@ for e.g.:Consider a simple program to add two numbers after performing lexical a
 ![alt text](https://github.com/ankur27aggarwal/dummy/blob/master/Screen%20Shot%202020-04-10%20at%2010.06.02%20PM.png)
 
 <p align="justify">
-These lexical tokens were stored in  CodeClone.csv file such that each row in represents different number of tokens present in each source code file. After parsing all the programs our dataset Contains 56,168 rows (or programs), including 10k duplicates approx and 15 different features.
+These lexical tokens were stored in  CodeClone.csv file such that each row represents different number of tokens present in each source code file. After parsing all the programs, our dataset Contains 56,168 rows (or programs), including 10k duplicates approx and 15 different features.
 </p>
 
 ![alt text](https://github.com/ankur27aggarwal/dummy/blob/master/Screenshot%202020-04-10%20at%205.22.53%20PM.png)
@@ -68,7 +68,7 @@ Here null values indicate features(tokens)which are not present in certain progr
 
 There are two big challenges that are associated with generated dataset. These two challenges are :-
 
-* [Curse Of Dimensionality](https://en.wikipedia.org/wiki/Curse_of_dimensionality) :- High Dimensionality of the unique characteristic i.e feature vector required to identify clones.
+* Curse Of Dimensionality :- High Dimensionality of the unique characteristic i.e feature vector required to identify clones.
 
 * Cost Of Comparison Operation :- Comparison of instances with all other instances in the dataset for finding similarity is expensive in terms of time and memory.
 
@@ -99,16 +99,16 @@ Step 3 :- Hashing as a candidate for nearest neighbour search.
 
 Locality-Sensitive Hashing (LSH) is an algorithmic technique that hashes similar input items into the same "buckets" with high probability.
 ![alt text](https://github.com/ankur27aggarwal/dummy/blob/master/Screenshot%202020-04-10%20at%205.56.37%20PM.png)
-For our project we used LSH using Random Projection.Locality Sensitive Hashing solves both the challenges mentioned earlier which are explained as followed :-
+For our project we used LSH using Random Projection. Locality Sensitive Hashing solves both the challenges mentioned earlier which are explained as follows :-
 
-- For Challenge 1 :- As shown in the figure the first hash function reduces the dimensionality of the dataset as we project our feature vector onto a random vector.
+* For Challenge 1 :- As shown in the figure the first hash function reduces the dimensionality of the dataset as we project our feature vector onto a lower-dimensional subspace using a random matrix whose columns have unit length.
 
-- For Challenge 2 :-  The second hash function further reduces the dimensionality and thus comparing  each instance with all the other instances on the basis of hash value  gives the exact similar pairs we use band=1 with buckets containing code clones.
+* For Challenge 2 :-  The second hash function further reduces the dimensionality and thus comparing  each instance with all the other instances on the basis of hash value  gives the exact similar pairs. We use band=1 with buckets containing code clones.
 
 # 3. Result
 <p align="justify">
 
-For finding the best value of number of clusters(k) as discussed above we used elbow method, we plotted a graph between inertia and number of clusters, our main aim is to choose k which has a small value of inertia. From the graph given below, we found that after number of clusters is equal to 5 there is not much significant change in inertia thus we chose numbers of clusters as 5
+For finding the best value of number of clusters(k) as discussed above we used elbow method, we plotted a graph between inertia and number of clusters, as our main aim is to choose k which has a small value of inertia. From the graph given below, we found that after number of clusters is equal to 5 there is not much significant change in inertia thus we chose numbers of clusters as 5.
 </p >
 
 
@@ -142,15 +142,15 @@ Drawbacks of choosing number of cluster k=5 :- Our dataset contains around 46k n
 
 
 <p align="justify">
-To find the relevance of our solution, we tried to compare our solution with existing works[5][6] as mostly were classification based and had less number of instance, we found that it was inappropriate to compare classification based approaches with clustering. For such problems where we need to find similarity between the elements, Clustering and similarity search worked better out of which similarity search is best option for finding exact similars, as LSH using random projection reduces the dimensionality of dataset and also reduces the computational time.
+To find the relevance of our solution, we tried to compare our solution with existing works[5][6] as mostly were classification based and had less number of instances, we found that it was inappropriate to compare classification based approaches with clustering. For such problems where we need to find similarity between the elements, Clustering and similarity search worked better, out of which similarity search is best option for finding exact similars, as LSH using random projection reduces the dimensionality of dataset and also reduces the computational time.
 </p>
 
 <p align="justify">
-However results would be have been completely different if we only needed to find near similar instead of exact similars for example if we changed the values in dot product from float to integer, it gave near similars and buckets reduced drastically, as we were trying to find near similars instead of exact similars. Further we did not had false positives and false negatives as we were only finding exact clones or similars. There would have been false positive and false negatives definitely if we would have been finding near similars. 
+However, results would be have been completely different if we only needed to find near similar instead of exact similars for example if we changed the values in dot product from float to integer, it gave near similars and buckets reduced drastically. As we were trying to find near similars instead of exact similars. Further we did not had false positives and false negatives as we were only finding exact clones or similars. There would have been false positive and false negatives definitely if we would have been finding near similars. 
 </p>
 
 <p align="justify">
-Our project works only on syntactic clones we are further thinking to extend our project for semantic clones which can be detected using abstract syntax trees, thus extracting features from these trees can help extracting the semantic details of the program which can be used as features to detect semantic clones.
+Our project works only on syntactic clones, we are further thinking to extend our project for semantic clones which can be detected using abstract syntax trees, thus extracting features from these trees can help extracting the semantic details of the program which can be used as features to detect semantic clones.
 </p>
 
 <p align="justify">
