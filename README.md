@@ -33,10 +33,10 @@ There have been previous work which involved detecting code clones, text based a
 
 # 2. Methods and Methodology 
 
-It further is divided into the phases that are :- 
+It is further divided into the phases that are :- 
 
 - Data generation 
-- algorithm implementation
+- Algorithm implementation
 
 # 2.1  Data Preparation
 <p align="justify">
