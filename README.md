@@ -100,12 +100,21 @@ For our project we used LSH using Random Projection.Locality Sensitive Hashing s
 - For Challenge 2 :-  The second hash function further reduces the dimensionality and thus comparing  each instance with all the other instances on the basis of hash value  gives the exact similar pairs we use band=1 with buckets containing code clones.
 
 # 3. Result
-![alt text](https://github.com/ankur27aggarwal/dummy/blob/master/Screen%20Shot%202020-04-10%20at%2010.32.59%20PM.png)
+<p align="center">
+  <img  src="https://github.com/ankur27aggarwal/dummy/blob/master/Screen%20Shot%202020-04-10%20at%2010.32.59%20PM.png">
+ Elbow plot w.r.t inertia
+</p>
 
-Clustering with k= 5 :-
 
 ![alt text](https://github.com/ankur27aggarwal/dummy/blob/master/Screenshot%202020-04-10%20at%205.58.10%20PM.png)
+<p align="center">
+Clustering with k= 5,Plot of points w.r.t to keywords and identifiers.
+</p> 
+
+
+
 <p align="justify">
+ 
 Drawbacks of choosing number of cluster k=5 :- Our dataset contains around 46k non duplicated programs so ideally it should have around 46k clusters, therefore K=5  won’t be a good choice for clone detection.To deal with problem of dimensionality we also tried PCA(Principal Component Analysis) dimensionality reduction technique.Results with clustering on dimensionally reduced data were same, Elbow was at k=5.Thus we used advanced approaching for finding similarity between source codes
 </p>
 
