@@ -5,11 +5,14 @@ Code cloning refers to similar or identical fragments of code.Reusing existing c
 </p>
 
 
+
+
 # 1. Introduction
 
 <p align="justify">
 Code clones are fragments of codes which are identical to each other, these clones are generated using copy and paste activities of the programmer,but the main problem with code clones is replication of bugs and difficulties in software  and maintenance, so it becomes imperative to detect these clones.
 </p>
+
 
 The 4 types of clones are:
 
@@ -24,6 +27,9 @@ The 4 types of clones are:
 <p align="justify">
 The aim of our project is to detect type 1 and type 2 clones. As, most of the programmers try to simply replicate their previous work and reuse existing pieces of code, due to this trend many bugs are introduced in the software unknowingly which are very hard to detect once the program reaches a certain level of complexity.With our approach of using machine learning we want to detect the clones in such a way that it can be used  for various other purpose also like aspect mining, programunderstanding, plagiarism detection, copyright infringement investigation, code compaction, software evolution analysis, code quality analysis, bug detection and virus detection may need the extraction of semantically or syntactically similar code blocks, making clone detection effective and useful part of software analysis. 
 </p>  
+<p align="justify">
+There have been previous works[1][2][3][4][5][6] which involved detecting code clones, text based approach was used in work done by [1], however this was only capable of detecting type 1 clones,Further works also used approaches like token based,graph based[7], very few[5][6]  also tried to use machine learning for detecting clones,but most of approaches were based on classification rather than using clustering and similarity search which are good candidates for finding similar items 
+</p>
 
 # 2. Methods and Methodology 
 
@@ -155,6 +161,7 @@ Initially we have only 56k instances in our dataset. Locality Sensitive Hashing 
   4. Randy Smith, Susan Horwitz, "Detecting and measuring similarity in code clones", Proceeding of Third International Workshop on            Detection of Software Clones., 2009.
   5. S. Jadon, "Code clones detection using machine learning technique: Support vector machine," 2016 International Conference on              Computing, Communication and Automation (ICCCA), Noida, 2016, pp. 399-303.
   6. A. Sheneamer and J. Kalita, "Semantic Clone Detection Using Machine Learning," 2016 15th IEEE International Conference on Machine          Learning and Applications (ICMLA), Anaheim, CA, 2016, pp. 1024-1028.
+  7. Baxter, Ira & Yahin, Andrew & de Moura, Leonardo & Sant'Anna, Marcelo & Bier, Lorraine. (1998). Clone Detection Using Abstract Syntax Trees.. Proc. of International Conference on Software Maintenance. 368-377. 368-377. 10.1109/ICSM.1998.738528. 
 
 
 
