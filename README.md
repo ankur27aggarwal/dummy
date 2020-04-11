@@ -110,10 +110,10 @@ For our project we used LSH using Random Projection. Locality Sensitive Hashing 
 
 * For Challenge 2 :-  The second hash function further reduces the dimensionality and thus comparing  each instance with all the other instances on the basis of hash value  gives the exact similar pairs. We use band=1 with buckets containing code clones.
 
-# 3. Result
+# 3. Results
 <p align="justify">
 
-For finding the best value of number of clusters(k) as discussed above we used elbow method, we plotted a graph between inertia and number of clusters, as our main aim is to choose k which has a small value of inertia. From the graph given below, we found that after number of clusters is equal to 5 there is not much significant change in inertia thus we chose numbers of clusters as 5.
+For finding the best value of number of clusters(k) as discussed above we used elbow method, we plotted a graph between inertia and number of clusters, as our main aim is to choose k which has a small value of inertia. From the graph given below, we found that after 5 clusters there is not much significant change in inertia thus we chose numbers of clusters as 5.
 </p >
 
 
@@ -131,10 +131,10 @@ Clustering with k= 5, Plot of points w.r.t to keywords and identifiers.
 
 
 <p align="justify"> 
-Drawbacks of choosing number of cluster k=5 :- Our dataset contains around 46k non duplicated programs so ideally it should have around 46k clusters, therefore K=5  won’t be a good choice for clone detection. To deal with problem of dimensionality we also tried PCA(Principal Component Analysis) dimensionality reduction technique. Results with clustering on dimensionally reduced data were same, Elbow was at k=5. Thus we used advanced approaching for finding similarity between source codes
+Drawbacks of choosing number of cluster k=5 :- Our dataset contains around 46k non duplicated programs so ideally it should have around 46k clusters, therefore K=5  won’t be a good choice for clone detection. To deal with the problem of dimensionality we also tried PCA(Principal Component Analysis) dimensionality reduction technique. Results with clustering on dimensionally reduced data were same, Elbow was at k=5. Thus we used advanced approaches for finding similarity between source codes
 </p>
 
-* Compared the performance of both the approaches on the basis of execution time.
+* Compared the performance of both approaches on the basis of execution time.
 * Locality sensitive Hashing detected duplicates faster than using Clustering and Hashing together.
 
 | Approach | Execution Time |
@@ -147,11 +147,11 @@ Drawbacks of choosing number of cluster k=5 :- Our dataset contains around 46k n
 
 
 <p align="justify">
-To find the relevance of our solution, we tried to compare our solution with existing works[5][6], as mostly were classification based and had less number of instances. We found that it was inappropriate to compare classification based approaches with clustering. For such problems where we need to find similarity between the elements, Clustering and similarity search worked better, out of which similarity search is best option for finding exact similars, as LSH using random projection reduces the dimensionality of dataset and also reduces the computational time.
+To find the relevance of our solution, we tried to compare our solution with existing works[5][6], as mostly were classification based and had less number of instances. We found that it was inaccurate to compare classification based approaches with clustering. For such problems where we need to find similarity between the elements, clustering and similarity search worked better, out of which similarity search is better option for finding exact similars, as LSH using random projection reduces the dimensionality of dataset and also reduces the computational time.
 </p>
 
 <p align="justify">
-However, results would be have been completely different if we only needed to find near similar instead of exact similars for example if we changed the values in dot product from float to integer, it gave near similars and buckets reduced drastically. As we were trying to find near similars instead of exact similars. Further we did not had false positives and false negatives as we were only finding exact clones or similars. There would have been false positive and false negatives definitely if we would have been finding near similars. 
+However, results would be have been completely different if we only needed to find near similar instead of exact similars. For example if we changed the values in dot product from float to integer, it gave near similars and buckets reduced drastically.  Further we did not have false positives and false negatives as we were only finding exact clones or similars. There would have been false positives and false negatives definitely if we would have been finding near similars. 
 </p>
 
 <p align="justify">
@@ -162,10 +162,10 @@ Our project works only on syntactic clones, we are further thinking to extend ou
 We only included java programs in our dataset thus we can add support for more languages which inturn can help in detecting clones for other languages also.
 </p>
 <p align="justify">
-Initially we have only 56k instances in our dataset which are from java language, locality Sensitive Hashing is giving fast results. Further extension of work with support for more programming languages, instances will increase gradually thus we are thinking to implement a parallelized version of Locality Sensitive Hashing using random projection for parallel computation and more faster results.
+Initially when we had only 56k instances in our dataset which are from java language, locality Sensitive Hashing is giving fast results. Further extension of work with support for more programming languages, instances will increase gradually and thus we are exploring ways to implement a parallelized version of Locality Sensitive Hashing using random projection for parallel computation. This is expected to give us faster results.
 </p>
 
-# 5. REFERENCES
+# 5. References
   1. Chanchal Kumar Roy, James R Cordy, "A Survey on Software Clone Detection Research", Computer and Information Science, vol. 115, no.        541, pp. 115, 2007.
   2. Ritesh V. Patil, Shashank. D. Joshi, Sachin V. Shinde, V. Khanna, "An effective approach using dissimilarity measures to estimate          software code clone", Electrical Electronics Signals Communication and Optimization (EESCO), pp. 1-6, 2015.
   3. Shantanu Saraswat, "Efficient detection of code clones B. Tech", Project under Dr. Amey Karkare CSE Deptt. IIT Kanpur, 2011.
