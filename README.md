@@ -1,7 +1,7 @@
 # Abstract 
 
 <p align="justify">
-Code cloning refers to similar or identical fragments of code.Reusing existing code for increasing software productivity is a key element of object oriented programming which makes code clone detection and management a primary concern for the current industry. Consequently, this cloning process may lead to bug propagation that significantly affects the maintenance cost. By considering this problem,detecting code clones  appears as an active area of research. For our project we  used machine learning and similarity search  to detect the similarity between the  code segments on the basis of lexical analysis of programs. We have used K-Means algorithm (to group the similar code in same cluster) and Locality Sensitive Hashing(LSH to find the similar code fragments) to find similar codes
+Code cloning refers to similar or identical fragments of code. Reusing existing code for increasing software productivity is a key element of object oriented programming which makes code clone detection and management a primary concern for the current industry. Consequently, this cloning process may lead to bug propagation that significantly affects the maintenance cost. By considering this problem, detecting code clones  appears as an active area of research. For our project we  used machine learning and similarity search  to detect the similarity between the  code segments on the basis of lexical analysis of programs. We have used K-Means algorithm (to group the similar code in same cluster) and Locality Sensitive Hashing(LSH to find the similar code fragments) to find similar codes
 </p>
 
 
@@ -18,7 +18,7 @@ The 4 types of clones are:
 
 * Exact clones (Type 1):Identical code segments except for changes in comments, layouts and whitespaces.
 
-* Renamed clones (Type 2):Code segments which are syntactically or structurally similar other than changes in comments,identifiers,types, literals, and layouts. These clones are also called parameterised clones.  
+* Renamed clones (Type 2):Code segments which are syntactically or structurally similar other than changes in comments, identifiers, types, literals, and layouts. These clones are also called parameterised clones.  
  
 * Near Miss clones (Type 3): Copied pieces with further modification such as addition or removal of statements and changes in whitespaces, identifiers, layouts, comments, and types but outcomes are similar. These clones are also known as gapped clones. 
 
@@ -28,7 +28,7 @@ The 4 types of clones are:
 The aim of our project is to detect type 1 and type 2 clones. As most of the programmers try to simply replicate their previous work and reuse existing pieces of code, due to this trend many bugs are introduced in the software unknowingly which are very hard to detect once the program reaches a certain level of complexity. With our approach of using machine learning, we want to detect the clones in such a way that it can be used  for various other purposes also like aspect mining, program understanding, plagiarism detection, copyright infringement investigation, code compaction, software evolution analysis, code quality analysis, bug detection and virus detection may need the extraction of semantically or syntactically similar code blocks, making clone detection effective and useful part of software analysis. 
 </p>  
 <p align="justify">
-There have been previous work which involved detecting code clones, text based approach was used in work done by [1], however this was only capable of detecting type 1 clones,Further works also used approaches like token based,graph based[7], very few[5][6]  also tried to use machine learning for detecting clones,but most of approaches were based on classification rather than using clustering and similarity search which are good candidates for finding similar items 
+There have been previous work which involved detecting code clones, text based approach was used in work done by [1], however this was only capable of detecting type 1 clones, Further works also used approaches like token based, graph based[7], very few[5][6]  also tried to use machine learning for detecting clones, but most of approaches were based on classification rather than using clustering and similarity search which are good candidates for finding similar items 
 </p>
 
 # 2. Methods and Methodology 
@@ -40,12 +40,12 @@ It further is divided into the phases that are :-
 
 # 2.1  Data Preparation
 <p align="justify">
-There was no available dataset for code clones,so there were no definitive set of features to characterize  these code clones.Therefore we chose the IJADataset which is a collection of java programs and contains 47k files with around 10092k lines of code. 
+There was no available dataset for code clones, so there were no definitive set of features to characterize  these code clones.Therefore we chose the IJADataset which is a collection of java programs and contains 47k files with around 10092k lines of code. 
 </p>
 We performed the following set of operations to generate data suitable for algorithms.
 
 - Step 1 :- Injection of code clones in dataset.<br>
-  * Injecting Type 1 clones(Exact CLones) :- Created multiple copies of the codes,Addition of comments in few codes.
+  * Injecting Type 1 clones(Exact CLones) :- Created multiple copies of the codes, Addition of comments in few codes.
   * Injecting Type 2 clones(Renamed CLones):- Modifications in identifier names including Type 1 changes<br>
 
 - Step 2 :- Generating Features:-
@@ -58,7 +58,7 @@ For eg:Consider a simple program to add two numbers after performing lexical ana
 ![alt text](https://github.com/ankur27aggarwal/dummy/blob/master/Screen%20Shot%202020-04-10%20at%2010.06.02%20PM.png)
 
 <p align="justify">
-These lexical tokens were stored in  CodeClone.csv file such that each row in represents different number of tokens present in each source code file.After parsing all the programs our dataset Contains 56,168 rows (or programs),including 10k duplicates approx and 15 different features.
+These lexical tokens were stored in  CodeClone.csv file such that each row in represents different number of tokens present in each source code file.After parsing all the programs our dataset Contains 56,168 rows (or programs), including 10k duplicates approx and 15 different features.
 </p>
 
 ![alt text](https://github.com/ankur27aggarwal/dummy/blob/master/Screenshot%202020-04-10%20at%205.22.53%20PM.png)
