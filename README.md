@@ -25,24 +25,24 @@ The 4 types of clones are:
 * Semantic clones (Type 4): More than one code segments that are functionally similar but implemented by different syntactic variants.
 
 <p align="justify">
-The aim of our project is to detect type 1 and type 2 clones. As most of the programmers try to simply replicate their previous work and reuse existing pieces of code, due to this trend many bugs are introduced in the software unknowingly which are very hard to detect once the program reaches a certain level of complexity. With our approach of using machine learning, we want to detect the clones in such a way that it can be used  for various other purposes also like aspect mining, program understanding, plagiarism detection, code compaction, software evolution analysis, code quality analysis, bug detection. Making clone detection effective and useful part of software analysis. 
+The aim of our project is to detect type 1 and type 2 clones. As most of the programmers try to simply replicate their previous work and reuse existing pieces of code, due to this trend many bugs are introduced in the software unknowingly which are very hard to detect once the program reaches a certain level of complexity. With our approach of using machine learning, we want to detect the clones in such a way that it can be used  for various other purposes also like aspect mining, program understanding, plagiarism detection, code compaction, software evolution analysis, code quality analysis, bug detection. This makes clone detection effective and useful part of software analysis. 
 </p>  
 <p align="justify">
-There have been previous work which involved detecting code clones, text based approach was used in work done by [1], however this was only capable of detecting type 1 clones, Further works also used approaches like token based, graph based[7], very few[5][6]  also tried to use machine learning for detecting clones, but most of approaches were based on classification rather than using clustering and similarity search which are good candidates for finding similar items 
+There have been previous works which involved detecting code clones, text based approach was used in work done by [1], however this was only capable of detecting type 1 clones, Further works also used approaches like token based, graph based[7], very few[5][6] tried to use machine learning for detecting clones, but most of approaches were based on classification rather than using clustering and similarity search which are good candidates for finding similar items 
 </p>
 
 # 2. Methods and Methodology 
 
-It is further divided into the phases that are :- 
+It is further divided into two phases :-
 
 - Data generation 
 - Algorithm implementation
 
 # 2.1  Data Preparation
 <p align="justify">
-There was no available dataset for code clones, so there were no definitive set of features to characterize  these code clones. Therefore we chose the IJADataset which is a collection of java programs and contains 47k files with around 10092k lines of code. 
+There was no available dataset for code clones, so there were no definitive set of features to characterize  these. Therefore we chose the IJADataset which is a collection of java programs and contains 47k files with around 10092k lines of code. 
 </p>
-We performed the following set of operations to generate data suitable for algorithms.
+We performed following set of operations to generate data suitable for algorithms.
 <p align="justify">
  
 - Step 1 :- Injection of code clones in dataset.<br>
@@ -58,7 +58,7 @@ We performed the following set of operations to generate data suitable for algor
 
 
 
-for e.g.:Consider a simple program to add two numbers after performing lexical analysis the tokens generated are given below.
+Consider an example program to add two numbers after performing lexical analysis the tokens generated are given below.
 
 ![alt text](https://github.com/ankur27aggarwal/dummy/blob/master/Screen%20Shot%202020-04-10%20at%2010.06.02%20PM.png)
 
@@ -67,11 +67,11 @@ These lexical tokens were stored in  CodeClone.csv file such that each row repre
 </p>
 
 ![alt text](https://github.com/ankur27aggarwal/dummy/blob/master/Screenshot%202020-04-10%20at%205.22.53%20PM.png)
-Here null values indicate features(tokens)which are not present in certain programs.
+Here null values indicate features(tokens) which are not present in certain programs.
 
 # 2.2 Algorithms Implemented
 
-There are two big challenges that are associated with generated dataset. These two challenges are :-
+Two big challenges that are associated with generated dataset are :-
 
 * Curse Of Dimensionality :- High Dimensionality of the unique characteristic i.e feature vector required to identify clones.
 
