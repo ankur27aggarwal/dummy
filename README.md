@@ -10,7 +10,7 @@ Code cloning refers to similar or identical fragments of code. Reusing existing 
 # 1. Introduction
 
 <p align="justify">
-Code clones are fragments of codes which are identical to each other, these clones are generated using copy and paste activities of the programmer, but the main problem with code clones is replication of bugs and difficulties in software and maintenance, so it becomes imperative to detect these clones.
+Code clones are fragments of codes which are identical to each other, these clones are generated using copy and paste activities of the programmer, but the main problem with code clones is replication of bugs and difficulties in software maintenance, so it becomes imperative to detect these clones.
 </p>
 
 
