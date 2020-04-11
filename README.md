@@ -113,6 +113,13 @@ We only included java programs in our dataset thus we can add support for more l
 
 Initially we have only 56k instances in our dataset. Locality Sensitive Hashing is giving fast results,However with support for more programming languages instances will increase gradually thus we are thinking to implement a parallelized version of Locality Sensitive Hashing using random projection for parallel computation and thus more faster results.
 
+# 5. REFERENCES
+  1. Chanchal Kumar Roy, James R Cordy, "A Survey on Software Clone Detection Research", Computer and Information Science, vol. 115, no.        541, pp. 115, 2007.
+  2. Ritesh V. Patil, Shashank. D. Joshi, Sachin V. Shinde, V. Khanna, "An effective approach using dissimilarity measures to estimate          software code clone", Electrical Electronics Signals Communication and Optimization (EESCO), pp. 1-6, 2015.
+  3. Shantanu Saraswat, "Efficient detection of code clones B. Tech", Project under Dr. Amey Karkare CSE Deptt. IIT Kanpur, 2011.
+  4. Randy Smith, Susan Horwitz, "Detecting and measuring similarity in code clones", Proceeding of Third International Workshop on            Detection of Software Clones., 2009.
+  5. S. Jadon, "Code clones detection using machine learning technique: Support vector machine," 2016 International Conference on              Computing, Communication and Automation (ICCCA), Noida, 2016, pp. 399-303.
+  6. A. Sheneamer and J. Kalita, "Semantic Clone Detection Using Machine Learning," 2016 15th IEEE International Conference on Machine          Learning and Applications (ICMLA), Anaheim, CA, 2016, pp. 1024-1028.
 
 
 
