@@ -15,7 +15,7 @@ The 4 types of clones are:
 
 - Exact clones (Type 1):Identical code segments except for changes in comments, layouts and whitespaces.
 
-- Renamed clones (Type 2):<div align="justify"> Code segments which are syntactically or structurally similar other than changes in comments, identifiers, types, literals, and layouts. These clones are also called parameterised clones. </div> 
+- Renamed clones (Type 2):Code segments which are syntactically or structurally similar other than changes in comments, identifiers,types, literals, and layouts. These clones are also called parameterised clones.  
  
 - Near Miss clones (Type 3): Copied pieces with further modification such as addition or removal of statements and changes in whitespaces, identifiers, layouts, comments, and types but outcomes are similar. These clones are also known as gapped clones. 
 
@@ -39,7 +39,7 @@ There was no available dataset for code clones,so there were no definitive set o
 We performed the following set of operations to generate data suitable for algorithms.
 
 - Step 1 :- Injection of code clones in dataset.<br>
-  - Injecting Type 1 clones(Exact CLones) :- Created multiple copies of the codes,Addition of comments in few codes.<br>
+  - Injecting Type 1 clones(Exact CLones) :- Created multiple copies of the codes,Addition of comments in few codes.
   - Injecting Type 2 clones(Renamed CLones):- Modifications in identifier names including Type 1 changes<br>
 
 - Step 2 :- Generating Features:-
@@ -62,7 +62,7 @@ Here null values indicate features(tokens)which are not present in certain progr
 
 There are two big challenges that are associated with generated dataset. These two challenges are :-
 
-* [Curse Of Dimensionality](https://en.wikipedia.org/wiki/Curse_of_dimensionality) :- High Dimensionality of the unique characteristic/feature vector required to identify clones.
+* [Curse Of Dimensionality](https://en.wikipedia.org/wiki/Curse_of_dimensionality) :- High Dimensionality of the unique characteristic i.e feature vector required to identify clones.
 
 * Cost Of Comparison Operation :- Comparison of instances with all other instances in the dataset for finding similarity is expensive in terms of time and memory.
 
@@ -83,11 +83,11 @@ Number of clusters :- To find the optimal number of clusters we used the elbow m
 
 This is done in three steps :-
 
-Step 1 :-  In this step we reduce the dimensionality by using the same PCA technique mentioned above.
+Step 1 :- In this step we reduce the dimensionality by using the same PCA technique mentioned above.
 
 Step 2 :- Dividing input space into smaller subspaces .
 
-Step 3 :-  Hashing as a candidate for nearest neighbour search.
+Step 3 :- Hashing as a candidate for nearest neighbour search.
 
 # 2.2.2 Locality Sensitive Hashing
 
