@@ -106,10 +106,9 @@ Clustering with k= 5 :-
 
 ![alt text](https://github.com/ankur27aggarwal/dummy/blob/master/Screenshot%202020-04-10%20at%205.58.10%20PM.png)
 <p align="justify">
-Drawbacks of choosing number of cluster k=5 :- Our dataset contains around 46k non duplicated programs so ideally it should have around 46k clusters, therefore K=5  won’t be a good choice for clone detection.To deal with problem of dimensionality we also tried PCA(Principal Component Analysis) dimensionality reduction technique.Results with clustering on dimensionally reduced data were same, Elbow was at k=5.
-
-Thus we used advanced approaching for finding similarity between source codes
+Drawbacks of choosing number of cluster k=5 :- Our dataset contains around 46k non duplicated programs so ideally it should have around 46k clusters, therefore K=5  won’t be a good choice for clone detection.To deal with problem of dimensionality we also tried PCA(Principal Component Analysis) dimensionality reduction technique.Results with clustering on dimensionally reduced data were same, Elbow was at k=5.Thus we used advanced approaching for finding similarity between source codes
 </p>
+
 - Compared the performance of both the approaches on the basis of execution time.
 - Locality sensitive Hashing detected duplicates faster than using Clustering and Hashing together.
 
