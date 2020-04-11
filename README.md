@@ -13,9 +13,9 @@ Code clones are fragments of codes which are identical to each other, these clon
 
 The 4 types of clones are:
 
-- Exact clones (Type 1): Identical code segments except for changes in comments, layouts and whitespaces. 
+- Exact clones (Type 1):Identical code segments except for changes in comments, layouts and whitespaces.
 
-- Renamed clones (Type 2):Code segments which are syntactically or structurally similar other than changes in comments, identifiers, types, literals, and layouts. These clones are also called parameterised clones. 
+- Renamed clones (Type 2):<div align="justify"> Code segments which are syntactically or structurally similar other than changes in comments, identifiers, types, literals, and layouts. These clones are also called parameterised clones. </div> 
  
 - Near Miss clones (Type 3): Copied pieces with further modification such as addition or removal of statements and changes in whitespaces, identifiers, layouts, comments, and types but outcomes are similar. These clones are also known as gapped clones. 
 
