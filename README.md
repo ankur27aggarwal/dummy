@@ -10,7 +10,7 @@ Code cloning refers to similar or identical fragments of code.Reusing existing c
 # 1. Introduction
 
 <p align="justify">
-Code clones are fragments of codes which are identical to each other, these clones are generated using copy and paste activities of the programmer,but the main problem with code clones is replication of bugs and difficulties in software  and maintenance, so it becomes imperative to detect these clones.
+Code clones are fragments of codes which are identical to each other, these clones are generated using copy and paste activities of the programmer, but the main problem with code clones is replication of bugs and difficulties in software and maintenance, so it becomes imperative to detect these clones.
 </p>
 
 
@@ -25,7 +25,7 @@ The 4 types of clones are:
 * Semantic clones (Type 4): More than one code segments that are functionally similar but implemented by different syntactic variants.
 
 <p align="justify">
-The aim of our project is to detect type 1 and type 2 clones. As most of the programmers try to simply replicate their previous work and reuse existing pieces of code, due to this trend many bugs are introduced in the software unknowingly which are very hard to detect once the program reaches a certain level of complexity.With our approach of using machine learning we want to detect the clones in such a way that it can be used  for various other purpose also like aspect mining, programunderstanding, plagiarism detection, copyright infringement investigation, code compaction, software evolution analysis, code quality analysis, bug detection and virus detection may need the extraction of semantically or syntactically similar code blocks, making clone detection effective and useful part of software analysis. 
+The aim of our project is to detect type 1 and type 2 clones. As most of the programmers try to simply replicate their previous work and reuse existing pieces of code, due to this trend many bugs are introduced in the software unknowingly which are very hard to detect once the program reaches a certain level of complexity. With our approach of using machine learning we want to detect the clones in such a way that it can be used  for various other purpose also like aspect mining, programunderstanding, plagiarism detection, copyright infringement investigation, code compaction, software evolution analysis, code quality analysis, bug detection and virus detection may need the extraction of semantically or syntactically similar code blocks, making clone detection effective and useful part of software analysis. 
 </p>  
 <p align="justify">
 There have been previous work which involved detecting code clones, text based approach was used in work done by [1], however this was only capable of detecting type 1 clones,Further works also used approaches like token based,graph based[7], very few[5][6]  also tried to use machine learning for detecting clones,but most of approaches were based on classification rather than using clustering and similarity search which are good candidates for finding similar items 
@@ -146,7 +146,7 @@ To find the relevance of our solution, we tried to compare our solution with exi
 </p>
 
 <p align="justify">
-However results would be have been completely different if we only needed to find near similar instead of exact similars for example if we changed the values in dot product from float to integer, it gave near similars and buckets reduced drastically, as we were trying to find near similars instead of exact similars.Further we did not had false positives and false negatives as we were only finding exact clones or similars.There would have been false positive and false negatives definitely if we would have been finding near similars. 
+However results would be have been completely different if we only needed to find near similar instead of exact similars for example if we changed the values in dot product from float to integer, it gave near similars and buckets reduced drastically, as we were trying to find near similars instead of exact similars. Further we did not had false positives and false negatives as we were only finding exact clones or similars. There would have been false positive and false negatives definitely if we would have been finding near similars. 
 </p>
 
 <p align="justify">
