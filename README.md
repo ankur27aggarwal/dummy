@@ -15,7 +15,7 @@ The 4 types of clones are:
 
 - Exact clones (Type 1):Identical code segments except for changes in comments, layouts and whitespaces.
 
-- Renamed clones (Type 2):Code segments which are syntactically or structurally similar other than changes in comments, identifiers,types, literals, and layouts. These clones are also called parameterised clones.  
+- Renamed clones (Type 2):Code segments which are syntactically or structurally similar other than changes in comments,identifiers,types, literals, and layouts. These clones are also called parameterised clones.  
  
 - Near Miss clones (Type 3): Copied pieces with further modification such as addition or removal of statements and changes in whitespaces, identifiers, layouts, comments, and types but outcomes are similar. These clones are also known as gapped clones. 
 
@@ -39,11 +39,11 @@ There was no available dataset for code clones,so there were no definitive set o
 We performed the following set of operations to generate data suitable for algorithms.
 
 - Step 1 :- Injection of code clones in dataset.<br>
-  - Injecting Type 1 clones(Exact CLones) :- Created multiple copies of the codes,Addition of comments in few codes.
-  - Injecting Type 2 clones(Renamed CLones):- Modifications in identifier names including Type 1 changes<br>
+  * Injecting Type 1 clones(Exact CLones) :- Created multiple copies of the codes,Addition of comments in few codes.
+  * Injecting Type 2 clones(Renamed CLones):- Modifications in identifier names including Type 1 changes<br>
 
 - Step 2 :- Generating Features:-
-  - Next step was to look for the features which could be used to distinguish each of these programs,thus we performed lexical analysis using JAVALANG tool on each program present in the dataset, it breaks each program into a set of tokens, we used count of each token present in a program as the set of features for that particular program.
+  * Next step was to look for the features which could be used to distinguish each of these programs,thus we performed lexical analysis using JAVALANG tool on each program present in the dataset, it breaks each program into a set of tokens, we used count of each token present in a program as the set of features for that particular program.
 
 
 
