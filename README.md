@@ -82,7 +82,7 @@ For our project we used LSH using Random Projection.Locality Sensitive Hashing s
 - For Challenge 2 :-  The second hash function further reduces the dimensionality and thus comparing  each instance with all the other instances on the basis of hash value  gives the exact similar pairs we use band=1 with buckets containing code clones.
 
 # 3. Result
-![alt text](https://github.com/ankur27aggarwal/dummy/blob/master/Screenshot%202020-04-10%20at%205.57.46%20PM.png)
+![alt text](https://github.com/ankur27aggarwal/dummy/blob/master/Screen%20Shot%202020-04-10%20at%2010.32.59%20PM.png)
 
 Clustering with k= 5 :-
 
