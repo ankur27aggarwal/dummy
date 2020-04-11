@@ -40,7 +40,7 @@ It is further divided into the phases that are :-
 
 # 2.1  Data Preparation
 <p align="justify">
-There was no available dataset for code clones, so there were no definitive set of features to characterize  these code clones.Therefore we chose the IJADataset which is a collection of java programs and contains 47k files with around 10092k lines of code. 
+There was no available dataset for code clones, so there were no definitive set of features to characterize  these code clones. Therefore we chose the IJADataset which is a collection of java programs and contains 47k files with around 10092k lines of code. 
 </p>
 We performed the following set of operations to generate data suitable for algorithms.
 
@@ -49,16 +49,16 @@ We performed the following set of operations to generate data suitable for algor
   * Injecting Type 2 clones(Renamed CLones):- Modifications in identifier names including Type 1 changes<br>
 
 - Step 2 :- Generating Features:-
-  * Next step was to look for the features which could be used to distinguish each of these programs,thus we performed lexical analysis using JAVALANG tool on each program present in the dataset, it breaks each program into a set of tokens, we used count of each token present in a program as the set of features for that particular program.
+  * Next step was to look for the features which could be used to distinguish each of these programs, thus we performed lexical analysis using JAVALANG tool on each program present in the dataset, it breaks each program into a set of tokens, we used count of each token present in a program as the set of features for that particular program.
 
 
 
-For eg:Consider a simple program to add two numbers after performing lexical analysis the tokens generated are given below.
+for e.g.:Consider a simple program to add two numbers after performing lexical analysis the tokens generated are given below.
 
 ![alt text](https://github.com/ankur27aggarwal/dummy/blob/master/Screen%20Shot%202020-04-10%20at%2010.06.02%20PM.png)
 
 <p align="justify">
-These lexical tokens were stored in  CodeClone.csv file such that each row in represents different number of tokens present in each source code file.After parsing all the programs our dataset Contains 56,168 rows (or programs), including 10k duplicates approx and 15 different features.
+These lexical tokens were stored in  CodeClone.csv file such that each row in represents different number of tokens present in each source code file. After parsing all the programs our dataset Contains 56,168 rows (or programs), including 10k duplicates approx and 15 different features.
 </p>
 
 ![alt text](https://github.com/ankur27aggarwal/dummy/blob/master/Screenshot%202020-04-10%20at%205.22.53%20PM.png)
@@ -91,7 +91,7 @@ This is done in three steps :-
 
 Step 1 :- In this step we reduce the dimensionality by using the same PCA technique mentioned above.
 
-Step 2 :- Dividing input space into smaller subspaces .
+Step 2 :- Dividing input space into smaller subspaces.
 
 Step 3 :- Hashing as a candidate for nearest neighbour search.
 
@@ -120,13 +120,13 @@ For finding the best value of number of clusters(k) as discussed above we used e
 
 ![alt text](https://github.com/ankur27aggarwal/dummy/blob/master/Screenshot%202020-04-10%20at%205.58.10%20PM.png)
 <p align="center">
-Clustering with k= 5,Plot of points w.r.t to keywords and identifiers.
+Clustering with k= 5, Plot of points w.r.t to keywords and identifiers.
 </p> 
 
 
 
 <p align="justify"> 
-Drawbacks of choosing number of cluster k=5 :- Our dataset contains around 46k non duplicated programs so ideally it should have around 46k clusters, therefore K=5  won’t be a good choice for clone detection.To deal with problem of dimensionality we also tried PCA(Principal Component Analysis) dimensionality reduction technique.Results with clustering on dimensionally reduced data were same, Elbow was at k=5.Thus we used advanced approaching for finding similarity between source codes
+Drawbacks of choosing number of cluster k=5 :- Our dataset contains around 46k non duplicated programs so ideally it should have around 46k clusters, therefore K=5  won’t be a good choice for clone detection. To deal with problem of dimensionality we also tried PCA(Principal Component Analysis) dimensionality reduction technique. Results with clustering on dimensionally reduced data were same, Elbow was at k=5. Thus we used advanced approaching for finding similarity between source codes
 </p>
 
 * Compared the performance of both the approaches on the basis of execution time.
@@ -134,7 +134,7 @@ Drawbacks of choosing number of cluster k=5 :- Our dataset contains around 46k n
 
 | Approach | Execution Time |
 | ------ | ------ |
-| PCA,K-Means Clustering and Hashing | ~3.71 Seconds |
+| PCA, K-Means Clustering and Hashing | ~3.71 Seconds |
 | Locality Sensitive Hashing Using Random Projection | ~2.16 Seconds |
 | Locality Sensitive Hashing Using Gaussian Projection(Scikit learn) | ~1.82 Seconds |
 
@@ -142,7 +142,7 @@ Drawbacks of choosing number of cluster k=5 :- Our dataset contains around 46k n
 
 
 <p align="justify">
-To find the relevance of our solution, we tried to compare our solution with existing works[5][6] as mostly were classification based and had less number of instance, we found that it was inappropriate to compare classification based approaches with clustering.For such problems where we need to find similarity between the elements, Clustering and similarity search worked better out of which similarity search is best option for finding exact similars,as LSH using random projection reduces the dimensionality of dataset and also reduces the computational time.
+To find the relevance of our solution, we tried to compare our solution with existing works[5][6] as mostly were classification based and had less number of instance, we found that it was inappropriate to compare classification based approaches with clustering. For such problems where we need to find similarity between the elements, Clustering and similarity search worked better out of which similarity search is best option for finding exact similars, as LSH using random projection reduces the dimensionality of dataset and also reduces the computational time.
 </p>
 
 <p align="justify">
@@ -157,7 +157,7 @@ Our project works only on syntactic clones we are further thinking to extend our
 We only included java programs in our dataset thus we can add support for more languages which inturn can help in detecting clones for other languages also.
 </p>
 <p align="justify">
-Initially we have only 56k instances in our dataset. Locality Sensitive Hashing is giving fast results,However with support for more programming languages instances will increase gradually thus we are thinking to implement a parallelized version of Locality Sensitive Hashing using random projection for parallel computation and thus more faster results.
+Initially we have only 56k instances in our dataset which are from java language, Locality Sensitive Hashing is giving fast results. However further extension of work with support for more programming languages instances will increase gradually thus we are thinking to implement a parallelized version of Locality Sensitive Hashing using random projection for parallel computation and thus more faster results.
 </p>
 
 # 5. REFERENCES
