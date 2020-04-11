@@ -28,7 +28,7 @@ The 4 types of clones are:
 The aim of our project is to detect type 1 and type 2 clones. As, most of the programmers try to simply replicate their previous work and reuse existing pieces of code, due to this trend many bugs are introduced in the software unknowingly which are very hard to detect once the program reaches a certain level of complexity.With our approach of using machine learning we want to detect the clones in such a way that it can be used  for various other purpose also like aspect mining, programunderstanding, plagiarism detection, copyright infringement investigation, code compaction, software evolution analysis, code quality analysis, bug detection and virus detection may need the extraction of semantically or syntactically similar code blocks, making clone detection effective and useful part of software analysis. 
 </p>  
 <p align="justify">
-There have been previous work which involved detecting code clones, however approach used was text based in work done by [1], which was only capable of detecting type 1 clones.Other works also used approaches like token based,graph based[7]and very few[5][6]  also tried to use machine learning for detecting clones,but most of approaches were based on classification rather than using clustering and similarity search which are good candidates for finding similar items.
+There have been previous work which involved detecting code clones, text based approach was used in work done by [1], however this was only capable of detecting type 1 clones,Further works also used approaches like token based,graph based[7], very few[5][6]  also tried to use machine learning for detecting clones,but most of approaches were based on classification rather than using clustering and similarity search which are good candidates for finding similar items 
 </p>
 
 # 2. Methods and Methodology 
@@ -106,6 +106,12 @@ For our project we used LSH using Random Projection.Locality Sensitive Hashing s
 - For Challenge 2 :-  The second hash function further reduces the dimensionality and thus comparing  each instance with all the other instances on the basis of hash value  gives the exact similar pairs we use band=1 with buckets containing code clones.
 
 # 3. Result
+<p align="justify">
+
+For finding the best value of number of clusters(k) as discussed above we used elbow method, we plotted a graph between inertia and number of clusters, our main aim is to choose k which has a small value of inertia. From the graph given below, we found that after number of clusters is equal to 5 there is not much significant change in inertia thus we chose numbers of clusters as 5
+</p >
+
+
 <p align="center">
   <img  src="https://github.com/ankur27aggarwal/dummy/blob/master/Screen%20Shot%202020-04-10%20at%2010.32.59%20PM.png"><br>
  Elbow plot w.r.t inertia and number of clusters
@@ -136,7 +142,7 @@ Drawbacks of choosing number of cluster k=5 :- Our dataset contains around 46k n
 
 
 <p align="justify">
-To find the relevance of our solution, we tried to compare our solution with existing works[5][6] which mostly used classification and had less number of instance, we found that it was inappropriate to use classification for such problems where we need to find similarity between the elements, Clustering and similarity search are candidates which can be used for finding similar items, out of which similarity search is best option for finding exact similars,as LSH using random projection reduces the dimensionality of dataset and also reduces the computational time.
+To find the relevance of our solution, we tried to compare our solution with existing works[5][6] as mostly were classification based and had less number of instance, we found that it was inappropriate to compare classification based approaches with clustering.For such problems where we need to find similarity between the elements, Clustering and similarity search worked better out of which similarity search is best option for finding exact similars,as LSH using random projection reduces the dimensionality of dataset and also reduces the computational time.
 </p>
 
 <p align="justify">
