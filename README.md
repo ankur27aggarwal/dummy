@@ -85,7 +85,6 @@ Due to these two factors we decided to implement K-Means and Locality Sensitive 
 
 # 2.2.1 K-MEANS ALGORITHM
 <p align="justify">
-
 K-means algorithm is an iterative algorithm that tries to partition the dataset into K pre-defined distinct non-overlapping subgroups (clusters) where each data point belongs to only one group. Since clustering is one of the most common exploratory data analysis techniques used to get an intuition about the structure of the data.Therefore, it makes sense to use K-means, as similar codes would be in the same cluster which is our main motivation behind the usage of k-means. For our project we have used the scikit-learn’s implementation of k-means and used the original higher dimensional dataset for clustering.
 </p>
 
