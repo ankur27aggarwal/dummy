@@ -1,7 +1,7 @@
 # Abstract 
 
 <p align="justify">
-Code cloning refers to similar or identical fragments of code. Reusing existing code for increasing software productivity is a key element of object oriented programming which makes code clone detection and management a primary concern for the current industry. Consequently, this cloning process may lead to bug propagation that significantly affects the maintenance cost. By considering this problem, detecting code clones  appears as an active area of research. For our project we  used machine learning and similarity search  to detect the similarity between the  code segments on the basis of lexical analysis of programs. We have used K-Means algorithm (to group the similar code in same cluster) and Locality Sensitive Hashing to the similar code fragments in the same bucket.
+Code cloning refers to similar or identical fragments of code. Reusing existing code for increasing software productivity is a key element of object oriented programming which makes code clone detection and management a primary concern for the current industry. Consequently, this cloning process may lead to bug propagation that significantly affects the maintenance cost. By considering this problem, detecting code clones  appears as an active area of research. For our project we  used machine learning and similarity search  to detect the similarity between the  code segments on the basis of lexical analysis of programs. We have used K-Means algorithm (to group the similar code in same cluster) and Locality Sensitive Hashing to group the similar code fragments in the same bucket.
 </p>
 
 
