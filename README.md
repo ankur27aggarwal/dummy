@@ -103,7 +103,7 @@ Thus we used advanced approaching for finding similarity between source codes
 
 # 4. Discussion
 
-To find the relevance of our solution, we tried to compare our solution with existing works which mostly used classification and had less number of instance, we found that it was inappropriate to use classification for such problems where we need to find similarity between the elements, Clustering and similarity search are candidates which can be used for finding similar items, out of which similarity search is best option for finding exact similars,as LSH using random projection reduces the dimensionality of dataset and also reduces the computational time.
+To find the relevance of our solution, we tried to compare our solution with existing works[5][6] which mostly used classification and had less number of instance, we found that it was inappropriate to use classification for such problems where we need to find similarity between the elements, Clustering and similarity search are candidates which can be used for finding similar items, out of which similarity search is best option for finding exact similars,as LSH using random projection reduces the dimensionality of dataset and also reduces the computational time.
 
 However results would be have been completely different if we only needed to find near similar instead of exact similars for example if we changed the values in dot product from float to integer, it gave near similars and buckets reduced drastically, as we were trying to find near similars instead of exact similars.Further we did not had false positives and false negatives as we were only finding exact clones or similars.There would have been false positive and false negatives definitely if we would have been finding near similars. 
 
