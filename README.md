@@ -44,12 +44,14 @@ There was no available dataset for code clones, so there were no definitive set 
 </p>
 We performed the following set of operations to generate data suitable for algorithms.
 <p align="justify">
+ 
 - Step 1 :- Injection of code clones in dataset.<br>
  
   * Injecting Type 1 clones(Exact CLones) :- Created multiple copies of the codes, Addition of comments in few codes.
   
   * Injecting Type 2 clones(Renamed CLones):- Modifications in identifier names including Type 1 changes<br>
 </p>
+
 - Step 2 :- Generating Features:-
 
   * Next step was to look for the features which could be used to distinguish each of these programs, thus we performed lexical analysis using JAVALANG tool on each program present in the dataset, it breaks each program into a set of tokens, we used count of each token present in a program as the set of features for that particular program.
