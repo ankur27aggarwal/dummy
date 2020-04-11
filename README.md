@@ -101,8 +101,8 @@ For our project we used LSH using Random Projection.Locality Sensitive Hashing s
 
 # 3. Result
 <p align="center">
-  <img  src="https://github.com/ankur27aggarwal/dummy/blob/master/Screen%20Shot%202020-04-10%20at%2010.32.59%20PM.png">
- Elbow plot w.r.t inertia
+  <img  src="https://github.com/ankur27aggarwal/dummy/blob/master/Screen%20Shot%202020-04-10%20at%2010.32.59%20PM.png"><br>
+ Elbow plot w.r.t inertia and number of clusters
 </p>
 
 
@@ -113,8 +113,7 @@ Clustering with k= 5,Plot of points w.r.t to keywords and identifiers.
 
 
 
-<p align="justify">
- 
+<p align="justify"> 
 Drawbacks of choosing number of cluster k=5 :- Our dataset contains around 46k non duplicated programs so ideally it should have around 46k clusters, therefore K=5  won’t be a good choice for clone detection.To deal with problem of dimensionality we also tried PCA(Principal Component Analysis) dimensionality reduction technique.Results with clustering on dimensionally reduced data were same, Elbow was at k=5.Thus we used advanced approaching for finding similarity between source codes
 </p>
 
