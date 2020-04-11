@@ -13,21 +13,13 @@ Code clones are fragments of codes which are identical to each other, these clon
 
 The 4 types of clones are:
 
-<p align="justify">
 - Exact clones (Type 1): Identical code segments except for changes in comments, layouts and whitespaces. 
-</p>  
 
-<p align="justify">
 - Renamed clones (Type 2):Code segments which are syntactically or structurally similar other than changes in comments, identifiers, types, literals, and layouts. These clones are also called parameterised clones. 
-</p>  
-  
-<p align="justify">
+ 
 - Near Miss clones (Type 3): Copied pieces with further modification such as addition or removal of statements and changes in whitespaces, identifiers, layouts, comments, and types but outcomes are similar. These clones are also known as gapped clones. 
-</p>  
 
-<p align="justify">
 - Semantic clones (Type 4): More than one code segments that are functionally similar but implemented by different syntactic variants.
-</p>
 
 <p align="justify">
 The aim of our project is to detect type 1 and type 2 clones. As, most of the programmers try to simply replicate their previous work and reuse existing pieces of code, due to this trend many bugs are introduced in the software unknowingly which are very hard to detect once the program reaches a certain level of complexity.With our approach of using machine learning we want to detect the clones in such a way that it can be used  for various other purpose also like aspect mining, programunderstanding, plagiarism detection, copyright infringement investigation, code compaction, software evolution analysis, code quality analysis, bug detection and virus detection may need the extraction of semantically or syntactically similar code blocks, making clone detection effective and useful part of software analysis. 
@@ -46,18 +38,12 @@ There was no available dataset for code clones,so there were no definitive set o
 </p>
 We performed the following set of operations to generate data suitable for algorithms.
 
-<p align="justify">
 - Step 1 :- Injection of code clones in dataset.<br>
   - Injecting Type 1 clones(Exact CLones) :- Created multiple copies of the codes,Addition of comments in few codes.<br>
   - Injecting Type 2 clones(Renamed CLones):- Modifications in identifier names including Type 1 changes<br>
-</p>
 
-<p align="justify">
 - Step 2 :- Generating Features:-
-
-
   - Next step was to look for the features which could be used to distinguish each of these programs,thus we performed lexical analysis using JAVALANG tool on each program present in the dataset, it breaks each program into a set of tokens, we used count of each token present in a program as the set of features for that particular program.
-</p> 
 
 
 
@@ -66,8 +52,7 @@ For eg:Consider a simple program to add two numbers after performing lexical ana
 ![alt text](https://github.com/ankur27aggarwal/dummy/blob/master/Screen%20Shot%202020-04-10%20at%2010.06.02%20PM.png)
 
 <p align="justify">
-
-These lexical tokens were stored in  CodeClone.csv file such that each row in represents different number of tokens present in each source code file.After parsing all the programs our dataset Contains 56,168 rows (or programs),including 10k duplicates approx and 15 different features .
+These lexical tokens were stored in  CodeClone.csv file such that each row in represents different number of tokens present in each source code file.After parsing all the programs our dataset Contains 56,168 rows (or programs),including 10k duplicates approx and 15 different features.
 </p>
 
 ![alt text](https://github.com/ankur27aggarwal/dummy/blob/master/Screenshot%202020-04-10%20at%205.22.53%20PM.png)
@@ -150,6 +135,7 @@ We only included java programs in our dataset thus we can add support for more l
 <p align="justify">
 Initially we have only 56k instances in our dataset. Locality Sensitive Hashing is giving fast results,However with support for more programming languages instances will increase gradually thus we are thinking to implement a parallelized version of Locality Sensitive Hashing using random projection for parallel computation and thus more faster results.
 </p>
+
 # 5. REFERENCES
   1. Chanchal Kumar Roy, James R Cordy, "A Survey on Software Clone Detection Research", Computer and Information Science, vol. 115, no.        541, pp. 115, 2007.
   2. Ritesh V. Patil, Shashank. D. Joshi, Sachin V. Shinde, V. Khanna, "An effective approach using dissimilarity measures to estimate          software code clone", Electrical Electronics Signals Communication and Optimization (EESCO), pp. 1-6, 2015.
