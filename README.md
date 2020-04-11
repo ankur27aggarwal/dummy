@@ -162,7 +162,7 @@ Our project works only on syntactic clones, we are further thinking to extend ou
 We only included java programs in our dataset thus we can add support for more languages which inturn can help in detecting clones for other languages also.
 </p>
 <p align="justify">
-Initially when we have only 56k instances in our dataset which are from java language only. We are thinking to Further extend of our work for source codes from other programming languages also, thus instances will increase gradually and thus we are exploring ways to implement a parallelized version of Locality Sensitive Hashing using random projection. This will give us faster results.
+Initially we have only 56k instances in our dataset which contains source codes from java language only. We are thinking to Further extend of our work for source codes from other programming languages also, thus instances will increase gradually and thus we are exploring ways to implement a parallelized version of Locality Sensitive Hashing using random projection. This will give us faster results.
 </p>
 
 # 5. References
